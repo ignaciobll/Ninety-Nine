@@ -21,3 +21,12 @@ myReverse :: [a] -> [a]
 myReverse [] = []
 myReverse [x] = [x]
 myReverse (x:xs) = myReverse xs ++ [x]
+
+isPalindrome :: (Eq a) => [a] -> Bool
+isPalindrome [] = False
+isPalindrome [x] = True
+isPalindrome [x,y] = x == y
+isPalindrome (x:xs) = x == y && isPalindrome rest
+  where
+    y = last xs
+    rest = init xs
