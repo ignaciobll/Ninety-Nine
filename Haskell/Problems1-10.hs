@@ -16,3 +16,8 @@ myLength :: [a] -> Int
 myLength [] = 0
 myLength [x] = 1
 myLength (_:xs) = 1 + myLength (xs)
+
+myReverse :: [a] -> [a]
+myReverse [] = []
+myReverse [x] = [x]
+myReverse (x:xs) = myReverse xs ++ [x]
