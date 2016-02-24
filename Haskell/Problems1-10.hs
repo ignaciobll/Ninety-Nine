@@ -10,4 +10,9 @@ myButLast [x,_] = x
 myButLast (_:xs) = myButLast xs
 
 elementAt :: Int -> [a] -> a
-elementAt z (xs) = last ((take z) (xs))
+elementAt z (xs) = last (take z (xs))
+
+myLength :: [a] -> Int
+myLength [] = 0
+myLength [x] = 1
+myLength (_:xs) = 1 + myLength (xs)
