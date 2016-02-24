@@ -8,3 +8,6 @@ myButLast [] = error "No last but one element"
 myButLast [x] = error "No last but one element"
 myButLast [x,_] = x
 myButLast (_:xs) = myButLast xs
+
+elementAt :: Int -> [a] -> a
+elementAt z (xs) = last ((take z) (xs))
