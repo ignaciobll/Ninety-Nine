@@ -1,6 +1,6 @@
 * Ninety-Nine Haskell Problems
 
-** Problemas de [[file:Haskell/Problems1-10.hs][1 a 10]] - [Listas]
+** Problemas de [[file:Problems1-10.hs][1 a 10]] - [Listas]
 
 1. Último elemento de una lista
-   [[file:Haskell/Problem1.hs][File]]
+   [[file:Problem1.hs][File]]

@@ -1,2 +1,2 @@
 * Ninety-Nine Problems
-** [[file:Haskell/README.org::*Ninety-Nine%20Haskell%20Problems][Haskell]]
+** [[file:Haskell/]Haskell]]
