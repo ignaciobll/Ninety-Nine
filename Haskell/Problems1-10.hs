@@ -26,7 +26,4 @@ isPalindrome :: (Eq a) => [a] -> Bool
 isPalindrome [] = False
 isPalindrome [x] = True
 isPalindrome [x,y] = x == y
-isPalindrome (x:xs) = x == y && isPalindrome rest
-  where
-    y = last xs
-    rest = init xs
+isPalindrome (x:xs) = x == (last xs) && isPalindrome (init xs)
