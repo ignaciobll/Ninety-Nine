@@ -1,2 +1,2 @@
 * Ninety-Nine Problems
-** [[file:Haskell/]Haskell]]
+** [[file:Haskell/][Haskell]]
