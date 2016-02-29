@@ -9,9 +9,14 @@ myButLast [x] = error "No last but one element"
 myButLast [x,_] = x
 myButLast (_:xs) = myButLast xs
 
+myTake :: Int -> [a] -> [a]
+myTake z [] = []
+myTake z [x] = x:[]
+myTake z (x:xs) = if z > 1 then x:(myTake (z-1) xs) else x:[] 
+                   
 elementAt :: Int -> [a] -> a
-elementAt z (xs) = last (take z (xs))
-
+elementAt z (xs) = myLast (myTake z (xs))
+                   
 myLength :: [a] -> Int
 myLength [] = 0
 myLength [x] = 1
@@ -27,3 +32,5 @@ isPalindrome [] = False
 isPalindrome [x] = True
 isPalindrome [x,y] = x == y
 isPalindrome (x:xs) = x == (last xs) && isPalindrome (init xs)
+
+-- Problema 7 --
