@@ -50,10 +50,13 @@ my_Flatten (Elem a) = [a]
 my_Flatten (List []) = []
 my_Flatten (List (x:xs)) = (my_Flatten x) ++ (my_Flatten (List xs))
 
-
 -- Problem 8 --
-
-
+compress :: (Eq a) => [a] -> [a]
+compress [] = []
+compress [x] = [x]
+compress (x:y:xs)
+    | x == y = compress (y:xs)
+    | x /= y = [x] ++ compress (y:xs)
 
 -- Problem 9 --
 
