@@ -44,14 +44,16 @@ isPalindrome [x,y] = x == y
 isPalindrome (x:xs) = x == (last xs) && isPalindrome (init xs)
 
 -- Problema 7 --
-{-data NestedList a = Elem a | List [NestedList a]
+data NestedList a = Elem a | List [NestedList a]
 my_Flatten :: NestedList a -> [a]
 my_Flatten (Elem a) = [a]
 my_Flatten (List []) = []
-my_Flatten (x:xs) = (my_Flatten x) ++ (my_Flatten xs)
- -}
+my_Flatten (List (x:xs)) = (my_Flatten x) ++ (my_Flatten (List xs))
+
 
 -- Problem 8 --
+
+
 
 -- Problem 9 --
 
