@@ -60,6 +60,19 @@ compress (x:y:xs)
 
 -- Problem 9 --
 
+pack :: (Eq a) => [a] -> [[a]]
+pack [] = []
+pack [x] = [[x]]
+pack (x:xs) = [(same (x:xs) x)] ++ pack (drop (length (same (x:xs) x)) (x:xs))
+              
+same :: (Eq a) => [a] -> a -> [a]
+same [] _ = []
+same [x] a = if x == a then [x] else []
+same (x:xs) y
+    | x == y = [x] ++ same xs y
+    | x /= y = []
+                   
+
 
 -------------  Test --------------
 
