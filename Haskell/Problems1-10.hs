@@ -72,7 +72,11 @@ same (x:xs) y
     | x == y = [x] ++ same xs y
     | x /= y = []
                    
+-- Problem 10 --
 
+encode :: (Eq a) => [a] -> [(Int,a)]
+encode [] = []
+encode (x:xs) = [(length (same (x:xs) x), x)] ++ (encode (drop (length (same (x:xs) x)) (x:xs)))
 
 -------------  Test --------------
 
