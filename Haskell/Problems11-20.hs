@@ -20,8 +20,13 @@ dupli (x:xs) = (dupli [x]) ++ (dupli xs)
 
 repli :: [a] -> Int -> [a]
 repli [] _ = []
---repli [x] n = 
-               
+repli [x] n = mul x n
+repli (x:xs) n = (mul x n) ++ repli xs n
+
+mul :: a -> Int -> [a]
+mul a 0 = []
+mul a 1 = [a]
+mul a n = [a] ++ (mul a (n-1))
 -- HELP --
 
 same :: (Eq a) => [a] -> a -> [a]
