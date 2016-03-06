@@ -27,6 +27,14 @@ mul :: a -> Int -> [a]
 mul a 0 = []
 mul a 1 = [a]
 mul a n = [a] ++ (mul a (n-1))
+
+-- Problem 16 --
+
+-- Problem 17 --
+
+split :: [a] -> Int -> ([a],[a])
+split xs n = ((take n xs), (drop n xs))
+
 -- HELP --
 
 same :: (Eq a) => [a] -> a -> [a]
