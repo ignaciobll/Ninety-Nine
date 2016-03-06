@@ -35,6 +35,18 @@ mul a n = [a] ++ (mul a (n-1))
 split :: [a] -> Int -> ([a],[a])
 split xs n = ((take n xs), (drop n xs))
 
+split' :: [a] -> Int -> ([a],[a])
+split' [] _ = ([],[])
+
+-- Problem 18 --
+
+slice :: [a] -> Int -> Int -> [a]
+slice [] _ _ = []
+slice (x:xs) a b
+    | a > 1 = slice xs (a-1) (b-1)
+    | a == 1 = take b (x:xs)
+
+                 
 -- HELP --
 
 same :: (Eq a) => [a] -> a -> [a]
